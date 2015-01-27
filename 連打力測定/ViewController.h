@@ -8,7 +8,42 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+
+@interface FirstViewController : UIViewController <UIPickerViewDelegate>
+{
+    IBOutlet UIPickerView *pickerview1;
+    
+    NSArray *timeArray;
+    NSArray *kazuArray;
+    
+    IBOutlet UILabel *label0;
+    IBOutlet UILabel *label1;
+    IBOutlet UILabel *label2;
+    IBOutlet UILabel *label3;
+    IBOutlet UILabel *labelA1;
+    IBOutlet UILabel *labelA2;
+    IBOutlet UILabel *labelA3;
+    IBOutlet UILabel *labelB1;
+    IBOutlet UILabel *labelB2;
+    IBOutlet UILabel *labelB3;
+    IBOutlet UILabel *labelC1;
+    IBOutlet UILabel *labelC2;
+    IBOutlet UILabel *labelC3;
+    IBOutlet UILabel *label4;
+    IBOutlet UILabel *label5;
+    IBOutlet UILabel *label6;
+    IBOutlet UILabel *label7;
+    IBOutlet UILabel *label8;
+    IBOutlet UILabel *label9;
+}
+
+
+
+@property (nonatomic, retain) UIPickerView *picker;
+
+
+@property int firstNum;
+
 
 
 @end
