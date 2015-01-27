@@ -114,9 +114,10 @@ numberOfRowsInComponent:(NSInteger)component
 
 
 -(IBAction)nextButton{
-    SecondViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
-    
+    View2ViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View2ViewController"];
     secondVC.secondNum = self.firstNum;
     [self presentViewController:secondVC animated:YES completion:nil];//YESならModal,Noなら何もなし
 }
+ 
+ 
 @end

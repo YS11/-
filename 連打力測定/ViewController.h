@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "View2ViewController.h"
 
 
 @interface FirstViewController : UIViewController <UIPickerViewDelegate>
 {
-    IBOutlet UIPickerView *pickerview1;
-    
+
     NSArray *timeArray;
     NSArray *kazuArray;
+    
     
     IBOutlet UILabel *label0;
     IBOutlet UILabel *label1;
@@ -37,9 +38,9 @@
     IBOutlet UILabel *label9;
 }
 
+-(IBAction)nextButton;
 
-
-@property (nonatomic, retain) UIPickerView *picker;
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 
 @property int firstNum;
