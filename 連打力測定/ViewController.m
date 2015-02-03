@@ -97,16 +97,15 @@ numberOfRowsInComponent:(NSInteger)component
             break;
     }
 }
-- (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row forComponent:(NSInteger)component
+-(NSString*)pickerView:(UIPickerView*)pickerViewtitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     switch (component) {
         case 0: // 1列目
-            return [timeArray objectsAtIndexes:nil];
+            [NSString stringWithFormat:@"%@", timeArray[row]];
             break;
             
         case 1: // 2列目
-            return [kazuArray objectsAtIndexes:nil];
+            [NSString stringWithFormat:@"%@", timeArray[row]];
             break;
             
         default:
