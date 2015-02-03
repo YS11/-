@@ -98,7 +98,7 @@ numberOfRowsInComponent:(NSInteger)component
     }
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger) forComponent:(NSInteger)component
+             titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     switch (component) {
         case 0: // 1列目
