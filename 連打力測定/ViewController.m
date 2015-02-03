@@ -8,14 +8,11 @@
 
 #import "ViewController.h"
 
-@interface FirstViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation FirstViewController{
-    UIPickerView *picker;
-}
-
+@implementation ViewController
 
 
 
@@ -33,18 +30,18 @@
     [super viewDidLoad];
     
     // UIPickerのインスタンス化
-    picker = [[UIPickerView alloc]init];
+    _picker = [[UIPickerView alloc]init];
     
     // デリゲートを設定
-    picker.delegate = self;
+    _picker.delegate = self;
     
     // データソースを設定
     
     // 選択インジケータを表示
-    picker.showsSelectionIndicator = YES;
+    _picker.showsSelectionIndicator = YES;
     
     // UIPickerのインスタンスをビューに追加
-    [self.view addSubview:picker];
+    [self.view addSubview:_picker];
     
     
     timeArray = [NSArray arrayWithObjects:@"10秒",
@@ -67,13 +64,13 @@
 /**
  * ピッカーに表示する行数を返す
  */
-- (NSInteger)pickerView:(UIPickerView *)pickerView
+-(NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
     return 3;
 }
 /**
-- (NSString *)pickerView:(UIPickerView *)pickerViewtitleForRow:(NSInteger)row forComponent:(NSInteger)components
+-(NSString *)pickerView:(UIPickerView *)pickerViewtitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     
             return [timeArray objectsAtIndexes:row];
@@ -83,14 +80,48 @@ numberOfRowsInComponent:(NSInteger)component
             }
 }
 */
+- (CGFloat)pickerView:(UIPickerView *)pickerView
+    widthForComponent:(NSInteger)component
+{
+    switch (component) {
+        case 0: // 1列目
+            return 50.0;
+            break;
+            
+        case 1: // 2列目
+            return 100.0;
+            break;
+            
+        default:
+            return 0;
+            break;
+    }
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger) forComponent:(NSInteger)component
+{
+    switch (component) {
+        case 0: // 1列目
+            return [timeArray objectsAtIndexes:nil];
+            break;
+            
+        case 1: // 2列目
+            return [kazuArray objectsAtIndexes:nil];
+            break;
+            
+        default:
+            return 0;
+            break;
+    }
+}
 /**
  * ピッカーの選択行が決まったとき
  */
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    // 1列目の選択された行数を取得
-/**    NSInteger val0 = [pickerView selectedRowInComponent:0];
+/**    // 1列目の選択された行数を取得
+    NSInteger val0 = [pickerView selectedRowInComponent:0];
     
     // 2列目の選択された行数を取得
     NSInteger val1 = [pickerView selectedRowInComponent:1];

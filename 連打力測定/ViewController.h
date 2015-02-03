@@ -10,7 +10,7 @@
 #import "View2ViewController.h"
 
 
-@interface FirstViewController : UIViewController <UIPickerViewDelegate>
+@interface ViewController : UIViewController <UIPickerViewDelegate>
 {
 
     NSArray *timeArray;
