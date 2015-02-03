@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
     // UIPickerのインスタンス化
-    _picker = [[UIPickerView alloc]init];
+    _picker = [[UIPickerView alloc] init];
     
     // デリゲートを設定
     _picker.delegate = self;
@@ -97,15 +97,18 @@ numberOfRowsInComponent:(NSInteger)component
             break;
     }
 }
--(NSString*)pickerView:(UIPickerView*)pickerViewtitleForRow:(NSInteger)row forComponent:(NSInteger)component
+
+
+-(NSString*)pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     switch (component) {
         case 0: // 1列目
-            [NSString stringWithFormat:@"%@", timeArray[row]];
+            return [NSString stringWithFormat:@"%@", timeArray[row]];
             break;
             
+            
         case 1: // 2列目
-            [NSString stringWithFormat:@"%@", timeArray[row]];
+            return [NSString stringWithFormat:@"%@", kazuArray[row]];
             break;
             
         default:
@@ -113,9 +116,8 @@ numberOfRowsInComponent:(NSInteger)component
             break;
     }
 }
-/**
- * ピッカーの選択行が決まったとき
- */
+
+
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
