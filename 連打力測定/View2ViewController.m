@@ -34,4 +34,31 @@
 }
 */
 
+
+- (void)ViewDidLoad{
+    [self CreateButton];   //追記。メソッドの呼び出し
+}
+
+- (void)CreateButton{
+    //ボタンのインスタンス化とボタンタイプの選択を行う。
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    //ボタンを表示する横位置、縦位置、横幅、縦幅を設定する。
+    button.frame = CGRectMake(10, 10, 100, 10);
+    
+    //Viewにボタンを追加して表示する。
+    [self.view addSubview:button];
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @end
