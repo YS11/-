@@ -16,10 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    UIButton *button = [UIButton buttonWithType: UIButtonTypeRoundedRect];[self.view addSubview:button];
+    self.view.multipleTouchEnabled = YES;
     
-    
+    {
+        View1 = [[UIView alloc] initWithFrame:CGRectMake(135, 300, 50, 50)];
+        View1.backgroundColor=[UIColor blackColor];
+        [self.view addSubview:View1];
+    }
+    {
+        View2 = [[UIView alloc] initWithFrame:CGRectMake( 45, 400, 50, 50)];
+        View2.backgroundColor=[UIColor blackColor];
+        [self.view addSubview:View2];
+    }
+    {
+        View3 = [[UIView alloc] initWithFrame:CGRectMake(225, 400, 50, 50)];
+        View3.backgroundColor=[UIColor blackColor];
+        [self.view addSubview:View3];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,23 +51,6 @@
 */
 
 
-- (void)ViewDidLoad{
-    [self CreateButton];   //追記。メソッドの呼び出し
-}
-
-/*
-
-- (void)CreateButton{
-    //ボタンのインスタンス化とボタンタイプの選択を行う。
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    
-    //ボタンを表示する横位置、縦位置、横幅、縦幅を設定する。
-    button.frame = CGRectMake(10, 100, 1000, 100);
-    
-    //Viewにボタンを追加して表示する。
-    [self.view addSubview:button];
-}
-*/
 
 
 

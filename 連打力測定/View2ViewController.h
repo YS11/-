@@ -19,9 +19,16 @@
     IBOutlet UILabel *labelA5;
     IBOutlet UILabel *labelA6;
     IBOutlet UILabel *labelA7;
+    
+    UIView *View1;
+    UIView *View2;
+    UIView *View3;
+    
+    int count;
 }
 @property int secondNum;
 
--(void)CreateButton;
+-(IBAction)add;
+
 
 @end
