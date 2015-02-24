@@ -20,15 +20,17 @@
     IBOutlet UILabel *labelA6;
     IBOutlet UILabel *labelA7;
     
-    UIView *View1;
-    UIView *View2;
-    UIView *View3;
+    UIButton *Button1;
+    UIButton *Button2;
+    UIButton *Button3;
+    UIButton *Button4;
+    UIButton *Stop;
     
     int count;
 }
 @property int secondNum;
 
--(IBAction)add;
+
 
 
 @end

@@ -19,19 +19,55 @@
     self.view.multipleTouchEnabled = YES;
     
     {
-        View1 = [[UIView alloc] initWithFrame:CGRectMake(135, 300, 50, 50)];
-        View1.backgroundColor=[UIColor blackColor];
-        [self.view addSubview:View1];
+        Button1 = [[UIButton alloc] initWithFrame:CGRectMake( 75, 300, 50, 50)];
+        Button1.backgroundColor=[UIColor blackColor];
+        [Button1 addTarget:self
+                    action:@selector(tap:)
+        forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Button1];
     }
     {
-        View2 = [[UIView alloc] initWithFrame:CGRectMake( 45, 400, 50, 50)];
-        View2.backgroundColor=[UIColor blackColor];
-        [self.view addSubview:View2];
+        Button2 = [[UIButton alloc] initWithFrame:CGRectMake(195, 300, 50, 50)];
+        Button2.backgroundColor=[UIColor blackColor];
+        [Button2 addTarget:self
+                    action:@selector(tap:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Button2];
     }
     {
-        View3 = [[UIView alloc] initWithFrame:CGRectMake(225, 400, 50, 50)];
-        View3.backgroundColor=[UIColor blackColor];
-        [self.view addSubview:View3];
+        Button3 = [[UIButton alloc] initWithFrame:CGRectMake( 75, 400, 50, 50)];
+        Button3.backgroundColor=[UIColor blackColor];
+        [Button3 addTarget:self
+                    action:@selector(tap:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Button3];
+    }
+    {
+        Button4 = [[UIButton alloc] initWithFrame:CGRectMake(195, 400, 50, 50)];
+        Button4.backgroundColor=[UIColor blackColor];
+        [Button4 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Button4];
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+        Stop =[UIButton buttonWithType:UIButtonTypeRoundedRect];
+        Stop.center = CGPointMake(10, 20);
+        [Stop setTitle:@"一時停止"
+                forState:UIControlStateNormal];
+        [Stop sizeToFit];
+        [Stop addTarget:self
+                   action:@selector(teisi:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Stop];
     }
 }
 
@@ -40,22 +76,55 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+-(void)tap:(id)sender{
+    count++;
+    labelA2.text=[NSString stringWithFormat:@"%d",count];
 }
-*/
-
-
-
-
-
-
-
-
-
+-(void)teisi:(id)sender{
+    UIAlertView *alert1 = [[UIAlertView alloc] init];
+    alert1.delegate = self;
+    alert1.title = @"一時停止";
+    alert1.message = @"タイトルにもどってもよろしいですか？";
+    [alert1 addButtonWithTitle:@"いいえ"];
+    [alert1 addButtonWithTitle:@"はい"];
+    [alert1 show];
+}
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (buttonIndex) {
+        case 0:
+            {
+            NSLog(@"いいえ");
+            UIAlertView *alert2 = [[UIAlertView alloc] init];
+            alert2.delegate = self;
+            alert2.title = @"どうしますか？";
+            alert2.message = @"選びましょう。";
+            [alert2 addButtonWithTitle:@"結果画面へ"];
+            [alert2 addButtonWithTitle:@"測定を続ける"];
+            [alert2 show];
+            }
+            break;
+            
+        case 1:
+            NSLog(@"はい");
+            [self dismissViewControllerAnimated:YES completion:nil];
+            break;
+    }
+}
+-(void)alertView2:(UIAlertView*)alertView2 clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"結果画面へ");
+            
+            break;
+            
+        case 1:
+            NSLog(@"測定を続ける");
+            break;
+    }
+}
 @end

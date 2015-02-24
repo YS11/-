@@ -46,10 +46,12 @@
     
     timeArray = [NSArray arrayWithObjects:@"10秒",
                                           @"20秒",
-                                          @"1分",nil];
-    kazuArray = [NSArray arrayWithObjects:@"一つ",
-                                          @"二つ",
-                                          @"四つ",nil];
+                                          @"1分",
+                                          @"∞",nil];
+    kazuArray = [NSArray arrayWithObjects:@"壱",
+                                          @"弐",
+                                          @"肆",
+                                          @"全",nil];
     
 }
 
@@ -67,7 +69,7 @@
 -(NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-    return 3;
+    return 4;
 }
 /**
 -(NSString *)pickerView:(UIPickerView *)pickerViewtitleForRow:(NSInteger)row forComponent:(NSInteger)component
@@ -85,7 +87,7 @@ numberOfRowsInComponent:(NSInteger)component
 {
     switch (component) {
         case 0: // 1列目
-            return 50.0;
+            return 60.0;
             break;
             
         case 1: // 2列目
@@ -121,22 +123,9 @@ numberOfRowsInComponent:(NSInteger)component
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-/**    // 1列目の選択された行数を取得
-    NSInteger val0 = [pickerView selectedRowInComponent:0];
-    
-    // 2列目の選択された行数を取得
-    NSInteger val1 = [pickerView selectedRowInComponent:1];
-    
-    // 3列目の選択された行数を取得
-    NSInteger val2 = [pickerView selectedRowInComponent:2];
-    
-    NSLog(@"1列目:%d行目が選択", val0);
-    NSLog(@"2列目:%d行目が選択", val1);
-*/
+
     NSInteger selectedRow = [pickerView selectedRowInComponent:0];
     NSLog(@"%ld", (long)selectedRow);
-
-
 }
 
 

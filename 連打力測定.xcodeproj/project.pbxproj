@@ -15,6 +15,7 @@
 		7A62A2851A654889004D9489 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A62A2841A654889004D9489 /* _____Tests.m */; };
 		7AC7F50E1A77B10C00494DBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC7F50C1A77B10C00494DBC /* Main.storyboard */; };
 		7AC7F5141A77BE4D00494DBC /* View2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7F5131A77BE4D00494DBC /* View2ViewController.m */; };
+		7AE734611A9391C000FDBF70 /* View3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE734601A9391C000FDBF70 /* View3ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		7AC7F50D1A77B10C00494DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "-/連打力測定/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		7AC7F5121A77BE4D00494DBC /* View2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View2ViewController.h; sourceTree = "<group>"; };
 		7AC7F5131A77BE4D00494DBC /* View2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View2ViewController.m; sourceTree = "<group>"; };
+		7AE7345F1A9391C000FDBF70 /* View3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View3ViewController.h; sourceTree = "<group>"; };
+		7AE734601A9391C000FDBF70 /* View3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View3ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				7A62A2701A654888004D9489 /* ViewController.m */,
 				7AC7F5121A77BE4D00494DBC /* View2ViewController.h */,
 				7AC7F5131A77BE4D00494DBC /* View2ViewController.m */,
+				7AE7345F1A9391C000FDBF70 /* View3ViewController.h */,
+				7AE734601A9391C000FDBF70 /* View3ViewController.m */,
 				7AC7F50C1A77B10C00494DBC /* Main.storyboard */,
 				7A62A2751A654888004D9489 /* Images.xcassets */,
 				7A62A2771A654888004D9489 /* LaunchScreen.xib */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE734611A9391C000FDBF70 /* View3ViewController.m in Sources */,
 				7AC7F5141A77BE4D00494DBC /* View2ViewController.m in Sources */,
 				7A62A2711A654888004D9489 /* ViewController.m in Sources */,
 				7A62A26E1A654888004D9489 /* AppDelegate.m in Sources */,

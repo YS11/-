@@ -10,7 +10,7 @@
 #import "View2ViewController.h"
 
 
-@interface ViewController : UIViewController <UIPickerViewDelegate>
+@interface ViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource>
 {
 
     NSArray *timeArray;
@@ -21,21 +21,6 @@
     IBOutlet UILabel *label1;
     IBOutlet UILabel *label2;
     IBOutlet UILabel *label3;
-    IBOutlet UILabel *labelA1;
-    IBOutlet UILabel *labelA2;
-    IBOutlet UILabel *labelA3;
-    IBOutlet UILabel *labelB1;
-    IBOutlet UILabel *labelB2;
-    IBOutlet UILabel *labelB3;
-    IBOutlet UILabel *labelC1;
-    IBOutlet UILabel *labelC2;
-    IBOutlet UILabel *labelC3;
-    IBOutlet UILabel *label4;
-    IBOutlet UILabel *label5;
-    IBOutlet UILabel *label6;
-    IBOutlet UILabel *label7;
-    IBOutlet UILabel *label8;
-    IBOutlet UILabel *label9;
 }
 
 -(IBAction)nextButton;
