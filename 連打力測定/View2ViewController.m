@@ -17,13 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.multipleTouchEnabled = YES;
-    
     {
+    if (_secondNum1==0)
+    {{
+        Button5 = [[UIButton alloc] initWithFrame:CGRectMake(65, 300, 200, 200)];
+        Button5.backgroundColor=[UIColor blackColor];
+        [Button5 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Button5];
+    }}
+    else if (_secondNum1==1)
+    {{
         Button1 = [[UIButton alloc] initWithFrame:CGRectMake( 75, 300, 50, 50)];
         Button1.backgroundColor=[UIColor blackColor];
         [Button1 addTarget:self
                     action:@selector(tap:)
-        forControlEvents:UIControlEventTouchUpInside];
+          forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:Button1];
     }
     {
@@ -32,6 +42,23 @@
         [Button2 addTarget:self
                     action:@selector(tap:)
          forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Button2];
+    }}
+    else if (_secondNum1==2)
+    {{
+        Button1 = [[UIButton alloc] initWithFrame:CGRectMake( 75, 300, 50, 50)];
+        Button1.backgroundColor=[UIColor blackColor];
+        [Button1 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:Button1];
+    }
+    {
+        Button2 = [[UIButton alloc] initWithFrame:CGRectMake(195, 300, 50, 50)];
+        Button2.backgroundColor=[UIColor blackColor];
+        [Button2 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:Button2];
     }
     {
@@ -49,12 +76,8 @@
                     action:@selector(tap:)
           forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:Button4];
+    }}
     }
-    
-    
-    
-    
-    
     
     
     
@@ -68,7 +91,33 @@
                    action:@selector(teisi:)
          forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:Stop];
+        
+        
+        
+        [super viewDidLoad];
     }
+    {
+        Timer = [NSTimer scheduledTimerWithTimeInterval:0.1
+                                                           target:self
+                                                         selector:@selector(time)
+                                                         userInfo:nil
+                                                          repeats:YES];
+    }
+    {
+        {
+            if (_secondNum==0) {
+                second=10;
+            }else if (_secondNum==1){
+                second=20;
+            }else if (_secondNum==2){
+                second=60;
+            }
+        }
+        [Timer fire];
+
+    }
+    _thirdNum = second;
+    _thirdNum = count;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -127,4 +176,34 @@
             break;
     }
 }
+
+
+
+-(void)time{
+    labelA1.text=[NSString stringWithFormat:@"%.1f",second];
+    {
+    if (second <= 0.0) {
+        [Timer invalidate];
+        View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];
+        thirdVC.fourthNum = self.thirdNum;
+        thirdVC.fourthNum1 = self.thirdNum1;
+
+        [self.navigationController pushViewController:thirdVC animated:YES];
+    }
+    else {
+        second=second-0.1;
+    }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 @end

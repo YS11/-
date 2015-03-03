@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "View3ViewController.h"
+
 
 @interface View3ViewController : UIViewController
 {
@@ -20,5 +22,10 @@
     
     int number;
 }
+
+@property int fourthNum;
+@property int fourthNum1;
+
+
 
 @end

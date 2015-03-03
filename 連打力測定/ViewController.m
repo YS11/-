@@ -46,12 +46,10 @@
     
     timeArray = [NSArray arrayWithObjects:@"10秒",
                                           @"20秒",
-                                          @"1分",
-                                          @"∞",nil];
+                                          @"1分",nil];
     kazuArray = [NSArray arrayWithObjects:@"壱",
                                           @"弐",
-                                          @"肆",
-                                          @"全",nil];
+                                          @"肆",nil];
     
 }
 
@@ -69,19 +67,10 @@
 -(NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-    return 4;
+    return 3;
 }
-/**
--(NSString *)pickerView:(UIPickerView *)pickerViewtitleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    
-            return [timeArray objectsAtIndexes:row];
-    
-            return [kazuArray objectsAtIndexes:row];
-            
-            }
-}
-*/
+
+
 - (CGFloat)pickerView:(UIPickerView *)pickerView
     widthForComponent:(NSInteger)component
 {
@@ -123,9 +112,11 @@ numberOfRowsInComponent:(NSInteger)component
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-
     NSInteger selectedRow = [pickerView selectedRowInComponent:0];
     NSLog(@"%ld", (long)selectedRow);
+     _firstNum = (int)selectedRow;
+    selectedRow = [pickerView selectedRowInComponent:1];
+    _firstNum1 = (int)selectedRow;
 }
 
 
@@ -137,6 +128,7 @@ numberOfRowsInComponent:(NSInteger)component
 -(IBAction)nextButton{
     View2ViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View2ViewController"];
     secondVC.secondNum = self.firstNum;
+    secondVC.secondNum1 = self.firstNum1;
     [self presentViewController:secondVC animated:YES completion:nil];//YESならModal,Noなら何もなし
 }
  

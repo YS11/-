@@ -29,7 +29,7 @@
 
 
 @property int firstNum;
-
+@property int firstNum1;
 
 
 @end
