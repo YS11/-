@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    {
+    LabelA.text = [NSString stringWithFormat:@"%d",number];
+    LabelB.text = [NSString stringWithFormat:@"%d",_fourthNum];
+    LabelC.text = [NSString stringWithFormat:@"%d",_fourthNum1];
+    }
+    {
+        number = _fourthNum/_fourthNum1;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +41,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+-(IBAction)title{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

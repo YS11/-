@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9023;&#x6253;&#x529b;&#x6e2c;&#x5b9a;/View2ViewController.m"
-            timestampString = "447081965.331365"
+            timestampString = "447093521.455097"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-time"
             landmarkType = "5">
          </BreakpointContent>

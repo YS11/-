@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "View3ViewController.h"
+#import "View2ViewController.h"
 
 
 @interface View3ViewController : UIViewController
@@ -20,12 +20,13 @@
     IBOutlet UILabel *Label6;
     IBOutlet UILabel *Label7;
     
+    
     int number;
 }
 
 @property int fourthNum;
 @property int fourthNum1;
 
-
+-(IBAction)title;
 
 @end

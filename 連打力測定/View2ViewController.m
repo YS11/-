@@ -99,7 +99,7 @@
     {
         Timer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                                            target:self
-                                                         selector:@selector(time)
+                                                         selector:@selector(jikan)
                                                          userInfo:nil
                                                           repeats:YES];
     }
@@ -179,24 +179,25 @@
 
 
 
--(void)time{
+-(void)jikan{
     labelA1.text=[NSString stringWithFormat:@"%.1f",second];
     {
     if (second <= 0.0) {
         [Timer invalidate];
-        View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];
+/*        View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];
+//        View3ViewController *thirdVC =  [[View3ViewController alloc] init];
         thirdVC.fourthNum = self.thirdNum;
         thirdVC.fourthNum1 = self.thirdNum1;
 
-        [self.navigationController pushViewController:thirdVC animated:YES];
+//        [self.navigationController thirdVC animated:YES ];
+        [self presentViewController:thirdVC animated:YES completion:nil];
+*/
     }
     else {
         second=second-0.1;
     }
     }
 }
-
-
 
 
 
