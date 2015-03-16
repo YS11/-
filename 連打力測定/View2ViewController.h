@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "View2ViewController.h"
+//#import "View2ViewController.h"
 #import "View3ViewController.h"
 
 
@@ -38,5 +38,7 @@
 @property int secondNum1;
 @property int thirdNum;
 @property int thirdNum1;
+
+-(void)jikangire;
 
 @end

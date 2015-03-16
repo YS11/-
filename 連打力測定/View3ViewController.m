@@ -22,16 +22,15 @@
     LabelB.text = [NSString stringWithFormat:@"%d",_fourthNum];
     LabelC.text = [NSString stringWithFormat:@"%d",_fourthNum1];
     }
-    {
-        number = _fourthNum/_fourthNum1;
-    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)number{
+    number = _fourthNum/_fourthNum1;
+}
 /*
 #pragma mark - Navigation
 
