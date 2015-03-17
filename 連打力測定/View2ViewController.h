@@ -33,6 +33,7 @@
     float second;
     
     int count;
+    
 }
 @property int secondNum;
 @property int secondNum1;

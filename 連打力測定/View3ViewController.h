@@ -22,6 +22,8 @@
     
     
     int number;
+    int seiji;
+    int kaisu;
 }
 
 @property int fourthNum;

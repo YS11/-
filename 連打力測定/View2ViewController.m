@@ -24,34 +24,61 @@
         Button5 = [[UIButton alloc] initWithFrame:CGRectMake(65, 300, 200, 200)];
         Button5.backgroundColor=[UIColor blackColor];
         [self.view addSubview:Button5];
+        [Button5 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
     }
     else if (_secondNum1==1)        //ボタン二つ
     {
         Button1 = [[UIButton alloc] initWithFrame:CGRectMake( 75, 300, 50, 50)];
         Button1.backgroundColor=[UIColor blackColor];
         [self.view addSubview:Button1];
+        [Button1 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+
         
         Button2 = [[UIButton alloc] initWithFrame:CGRectMake(195, 300, 50, 50)];
         Button2.backgroundColor=[UIColor blackColor];
         [self.view addSubview:Button2];
+        [Button2 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+
     }
     else if (_secondNum1==2)        //ボタン四つ
     {
         Button1 = [[UIButton alloc] initWithFrame:CGRectMake( 75, 300, 50, 50)];
         Button1.backgroundColor=[UIColor blackColor];
         [self.view addSubview:Button1];
+        [Button1 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+
 
         Button2 = [[UIButton alloc] initWithFrame:CGRectMake(195, 300, 50, 50)];
         Button2.backgroundColor=[UIColor blackColor];
         [self.view addSubview:Button2];
+        [Button2 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+
 
         Button3 = [[UIButton alloc] initWithFrame:CGRectMake( 75, 400, 50, 50)];
         Button3.backgroundColor=[UIColor blackColor];
         [self.view addSubview:Button3];
+        [Button3 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+
 
         Button4 = [[UIButton alloc] initWithFrame:CGRectMake(195, 400, 50, 50)];
         Button4.backgroundColor=[UIColor blackColor];
         [self.view addSubview:Button4];
+        [Button4 addTarget:self
+                    action:@selector(tap:)
+          forControlEvents:UIControlEventTouchUpInside];
+
     }
     }
     
@@ -91,29 +118,38 @@
         }
 
     }
-    _thirdNum = second;
-    _thirdNum = count;
 }
-
+/*                                                                  yokunai
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if ([event touchesForView:Button1]) {
-        [self tap];
+//        [self tap];
+        NSLog(@"ya");
+        count++;
+        labelA2.text=[NSString stringWithFormat:@"%d",count];
     }
     else if ([event touchesForView:Button2]){
-        [self tap];
+//        [self tap];
+        count++;
+        labelA2.text=[NSString stringWithFormat:@"%d",count];
     }
     else if ([event touchesForView:Button3]){
-        [self tap];
+//        [self tap];
+        count++;
+        labelA2.text=[NSString stringWithFormat:@"%d",count];
     }
     else if ([event touchesForView:Button4]){
-        [self tap];
+//        [self tap];
+        count++;
+        labelA2.text=[NSString stringWithFormat:@"%d",count];
     }
     else if ([event touchesForView:Button5]){
-        [self tap];
+//        [self tap];
+        count++;
+        labelA2.text=[NSString stringWithFormat:@"%d",count];
     }
 }
-
+*/
 -(void)tap{
     count++;
     labelA2.text=[NSString stringWithFormat:@"%d",count];
@@ -125,6 +161,7 @@
     count++;
     labelA2.text=[NSString stringWithFormat:@"%d",count];
 }
+
 -(void)teisi:(id)sender{
     UIAlertView *alert1 = [[UIAlertView alloc] init];
     alert1.delegate = self;
@@ -193,15 +230,23 @@
     }
 }
 
--(void)jikangire{
-    View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];
-    thirdVC.fourthNum = self.thirdNum;
-    thirdVC.fourthNum1 = self.thirdNum1;
-    [self presentViewController:thirdVC animated:YES completion:nil];
-    NSLog(@"po");
+-(void)atai{
+    _thirdNum = second;
+    _thirdNum = count;
 }
 
 
+-(void)jikangire{
+    View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];//行き先
+//    thirdVC.fourthNum = _thirdNum;
+//    thirdVC.fourthNum1 =_thirdNum1;
+    thirdVC.fourthNum  = second;
+    thirdVC.fourthNum1 = count;
+    [self presentViewController:thirdVC animated:YES completion:nil];//画面遷移
+    
+}
+
+//thirdVC.fourthNum1 = self.thirdNum1;
 
 
 @end

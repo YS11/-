@@ -16,13 +16,19 @@
 
 @implementation View3ViewController
 
+-(void)atai2{
+    _fourthNum  = seiji;
+    _fourthNum1 = kaisu;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     {
     LabelA.text = [NSString stringWithFormat:@"%d",number];
-    LabelB.text = [NSString stringWithFormat:@"%d",_fourthNum];
-    LabelC.text = [NSString stringWithFormat:@"%d",_fourthNum1];
+    LabelB.text = [NSString stringWithFormat:@"%d",seiji];
+    LabelC.text = [NSString stringWithFormat:@"%d",kaisu];
     }
 }
 
@@ -31,7 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)number{
-    number = _fourthNum/_fourthNum1;
+    number = seiji/kaisu;
 }
 /*
 #pragma mark - Navigation
