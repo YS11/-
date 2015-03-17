@@ -110,10 +110,13 @@
         {
             if (_secondNum==0) {
                 second=5;
+                _thirdNum=5;
             }else if (_secondNum==1){
                 second=20;
+                _thirdNum=20;
             }else if (_secondNum==2){
                 second=60;
+                _thirdNum=60;
             }
         }
 
@@ -153,6 +156,7 @@
 -(void)tap{
     count++;
     labelA2.text=[NSString stringWithFormat:@"%d",count];
+    _thirdNum=count;
 }
 
 
@@ -217,12 +221,6 @@
     if (second <= 0.0) {
         [self jikangire];
         [Timer invalidate];
-/*        View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];
-        [[View3ViewController alloc]init];
-        thirdVC.fourthNum = self.thirdNum;
-        thirdVC.fourthNum1 = self.thirdNum1;
-        [self presentViewController:thirdVC animated:YES completion:nil];
-*/
     }
     else {
         second=second-0.01;
@@ -230,18 +228,12 @@
     }
 }
 
--(void)atai{
-    _thirdNum = second;
-    _thirdNum = count;
-}
 
 
 -(void)jikangire{
     View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];//行き先
-//    thirdVC.fourthNum = _thirdNum;
-//    thirdVC.fourthNum1 =_thirdNum1;
-    thirdVC.fourthNum  = second;
-    thirdVC.fourthNum1 = count;
+    thirdVC.fourthNum  = _thirdNum;
+    thirdVC.fourthNum1 = _thirdNum1;
     [self presentViewController:thirdVC animated:YES completion:nil];//画面遷移
     
 }

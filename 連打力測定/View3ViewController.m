@@ -37,7 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)number{
-    number = seiji/kaisu;
+    number = seiji / seiji;
 }
 /*
 #pragma mark - Navigation
