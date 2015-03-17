@@ -7,6 +7,8 @@
 //
 
 #import "View3ViewController.h"
+#import "ViewController.h"
+
 
 @interface View3ViewController ()
 
@@ -44,7 +46,9 @@
 
 
 -(IBAction)title{
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    ViewController *firstVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    [self presentViewController:firstVC animated:YES completion:nil];//YESならModal,Noなら何もなし
 }
 
 

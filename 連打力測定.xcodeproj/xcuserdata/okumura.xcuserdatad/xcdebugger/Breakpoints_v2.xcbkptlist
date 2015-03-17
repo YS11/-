@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9023;&#x6253;&#x529b;&#x6e2c;&#x5b9a;/View2ViewController.m"
-            timestampString = "448195471.288571"
+            timestampString = "448285039.35616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-alertView2:clickedButtonAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9023;&#x6253;&#x529b;&#x6e2c;&#x5b9a;/View2ViewController.m"
-            timestampString = "448195471.288571"
+            timestampString = "448285039.35616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "-jikan"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-timer"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

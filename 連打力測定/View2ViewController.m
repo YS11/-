@@ -89,7 +89,6 @@
                 second=60;
             }
         }
-        [Timer fire];
 
     }
     _thirdNum = second;
@@ -99,7 +98,6 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if ([event touchesForView:Button1]) {
-        //NULLじゃなかったら、`Button1`がタッチされている
         [self tap];
     }
     else if ([event touchesForView:Button2]){
@@ -109,6 +107,9 @@
         [self tap];
     }
     else if ([event touchesForView:Button4]){
+        [self tap];
+    }
+    else if ([event touchesForView:Button5]){
         [self tap];
     }
 }
@@ -160,7 +161,7 @@
     switch (buttonIndex) {
         case 0:
             NSLog(@"結果画面へ");
-            
+            [self jikangire];
             break;
             
         case 1:
@@ -169,7 +170,9 @@
     }
 }
 
-
+-(void)timer{
+    [Timer fire];
+}
 
 -(void)jikan{
     labelA1.text=[NSString stringWithFormat:@"%.1f",second];
@@ -177,12 +180,10 @@
     if (second <= 0.0) {
         [self jikangire];
         [Timer invalidate];
-        Timer=nil;
 /*        View3ViewController *thirdVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"View3ViewController"];
         [[View3ViewController alloc]init];
         thirdVC.fourthNum = self.thirdNum;
         thirdVC.fourthNum1 = self.thirdNum1;
-
         [self presentViewController:thirdVC animated:YES completion:nil];
 */
     }
@@ -197,18 +198,8 @@
     thirdVC.fourthNum = self.thirdNum;
     thirdVC.fourthNum1 = self.thirdNum1;
     [self presentViewController:thirdVC animated:YES completion:nil];
+    NSLog(@"po");
 }
-
-
-
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    [Timer invalidate];
-    Timer = NULL;
-}
-
 
 
 
